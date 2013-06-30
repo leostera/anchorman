@@ -1,0 +1,32 @@
+{
+  "name": "anchorman",
+  "version": "0.0.0",
+  "description": "reporter transport library hooked with events or websockets",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leostera/anchorman.git"
+  },
+  "keywords": [
+    "reporter",
+    "transport",
+    "library",
+    "events",
+    "websockets"
+  ],
+  "author": "Leandro Ostera <sayhi@leostera.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leostera/anchorman/issues"
+  },
+  "devDependencies": {
+    "mocha": "1.11.x",
+    "should": "1.2.x"
+  },
+  "dependencies": {
+    "eventemitter2": "~0.4.12"
+  }
+}
