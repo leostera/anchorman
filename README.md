@@ -24,4 +24,5 @@ anchorman.on('someEvent', transportsArray);
 anchorman.broadcast('someEvent', {some: 'data'});
 ```
 
-Made with <3 by Leandro Ostera
+### Credits
+Made with :heart: by Leandro Ostera
