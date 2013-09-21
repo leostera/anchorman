@@ -25,9 +25,9 @@ anchorman.on('someOtherEvent', function (data) {
 
 // transports can be objects that implement a publish function
 var transportObject = {
-  someData: 'blabla',
+  someData: 'prefix:',
   publish: function (data) {
-
+    console.log(someData,data);
   }
 };
 
