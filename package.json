@@ -1,6 +1,6 @@
 {
   "name": "anchorman",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "reporter library",
   "main": "index.js",
   "repository": {
@@ -10,7 +10,7 @@
   "keywords": [
     "reporter",
     "library",
-    "events",
+    "events"
   ],
   "author": "Leandro Ostera <me@leostera.com>",
   "license": "MIT",

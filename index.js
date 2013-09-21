@@ -1,4 +1,5 @@
 var ee2 = require('eventemitter2').EventEmitter2;
+
 var e = new ee2({
   newListeners: false,
   delimiter:':'
@@ -7,9 +8,10 @@ var e = new ee2({
 var anchorman = {
   prefix: 'anchorman:',
   channels: {},
+  complain: false,
 
   broadcast: function (channel, data) {
-    if(!this.channels[this.prefix+channel]) {
+    if(!this.channels[this.prefix+channel] && this.complain) {
       throw new Error('Failed to broadcast to a channel without any transports to handle it');
     }
     e.emit(this.prefix+channel, data);
@@ -25,7 +27,6 @@ var anchorman = {
         this.channels[channel] = [];
         e.on(channel, function (data) {
           if(this.channels[channel]) {
-            console.log(channel, this.channels[channel]);
             this.channels[channel].forEach(function (t) {
               t.publish(data);
             });
@@ -47,8 +48,5 @@ var anchorman = {
     return this;
   }
 };
-
-// inherit from EventEmitter2
-// require('utils').inherit(anchorman,require('eventemitter2').EventEmitter2);
 
 module.exports = anchorman;
